@@ -1,0 +1,1 @@
+export { endpointRouter } from './endpointRouter';

@@ -1,0 +1,1 @@
+export { endpointTypeRouter } from './endpointTypeRouter';

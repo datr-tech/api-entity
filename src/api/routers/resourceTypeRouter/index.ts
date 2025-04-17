@@ -1,0 +1,1 @@
+export { resourceTypeRouter } from './resourceTypeRouter';
