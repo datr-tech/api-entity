@@ -1,5 +1,5 @@
-import { Types } from 'mongoose';
 import { FrameworkModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
 export const frameworkControllerDeleteFramework = async ({ frameworkId }) => {
   const res = await FrameworkModel.findOneAndUpdate(

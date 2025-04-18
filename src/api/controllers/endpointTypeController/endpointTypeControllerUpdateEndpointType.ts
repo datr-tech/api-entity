@@ -1,6 +1,9 @@
 import { EndpointTypeModel } from '@app/api/models';
 
-export const endpointTypeControllerUpdateEndpointType = async ({ endpointTypeId, payload }) => {
+export const endpointTypeControllerUpdateEndpointType = async ({
+  endpointTypeId,
+  payload,
+}) => {
   const res = await EndpointTypeModel.findOneAndUpdate(
     {
       _id: endpointTypeId,

@@ -1,5 +1,5 @@
-import { Types } from 'mongoose';
 import { EndpointTypeModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
 export const endpointTypeControllerDeleteEndpointType = async ({ endpointTypeId }) => {
   const res = await EndpointTypeModel.findOneAndUpdate(

@@ -1,7 +1,12 @@
-import { Types } from 'mongoose';
 import { ResourceTypeModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
-export const resourceTypeControllerCreateResourceType = async ({ description, name, adminStatusId, adminUserId }) => {
+export const resourceTypeControllerCreateResourceType = async ({
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const resourceTypeId = new Types.ObjectId();
   const modelParams = {
     resourceTypeId,

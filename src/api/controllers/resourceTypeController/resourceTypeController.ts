@@ -1,7 +1,7 @@
 import { resourceTypeControllerCreateResourceType } from './resourceTypeControllerCreateResourceType';
-import { resourceTypeControllerUpdateResourceType } from './resourceTypeControllerUpdateResourceType';
-import { resourceTypeControllerReadResourceType } from './resourceTypeControllerReadResourceType';
 import { resourceTypeControllerDeleteResourceType } from './resourceTypeControllerDeleteResourceType';
+import { resourceTypeControllerReadResourceType } from './resourceTypeControllerReadResourceType';
+import { resourceTypeControllerUpdateResourceType } from './resourceTypeControllerUpdateResourceType';
 
 export const resourceTypeController = {
   createResourceType: resourceTypeControllerCreateResourceType,

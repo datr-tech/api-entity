@@ -1,7 +1,7 @@
 import { endpointControllerCreateEndpoint } from './endpointControllerCreateEndpoint';
-import { endpointControllerUpdateEndpoint } from './endpointControllerUpdateEndpoint';
-import { endpointControllerReadEndpoint } from './endpointControllerReadEndpoint';
 import { endpointControllerDeleteEndpoint } from './endpointControllerDeleteEndpoint';
+import { endpointControllerReadEndpoint } from './endpointControllerReadEndpoint';
+import { endpointControllerUpdateEndpoint } from './endpointControllerUpdateEndpoint';
 
 export const endpointController = {
   createEndpoint: endpointControllerCreateEndpoint,

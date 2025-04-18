@@ -1,5 +1,5 @@
-import { Types } from 'mongoose';
 import { ResourceTypeModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
 export const resourceTypeControllerDeleteResourceType = async ({ resourceTypeId }) => {
   const res = await ResourceTypeModel.findOneAndUpdate(

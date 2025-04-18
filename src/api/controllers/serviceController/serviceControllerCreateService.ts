@@ -1,7 +1,13 @@
-import { Types } from 'mongoose';
 import { ServiceModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
-export const serviceControllerCreateService = async ({ frameworkId, description, name, adminStatusId, adminUserId }) => {
+export const serviceControllerCreateService = async ({
+  frameworkId,
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const serviceId = new Types.ObjectId();
   const modelParams = {
     serviceId,

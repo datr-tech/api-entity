@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { resourceTypeValidationSchemaReadResourceType } from '@freight/entity-router-validation-schemas';
 import { resourceTypeController } from '@app/api/controllers/resourceTypeController';
+import { resourceTypeValidationSchemaReadResourceType } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const resourceTypeRouterReadResourceType = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const resourceTypeRouterReadResourceType = Router(options).get(
 
     if (errors.isEmpty()) {
       const { resourceTypeId } = matchedData(req);
-      const resourceType = await resourceTypeController.readResourceType({ resourceTypeId });
+      const resourceType = await resourceTypeController.readResourceType({
+        resourceTypeId,
+      });
 
       res.status(200).send({ resourceType });
     } else {

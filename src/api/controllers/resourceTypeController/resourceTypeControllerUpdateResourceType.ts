@@ -1,6 +1,9 @@
 import { ResourceTypeModel } from '@app/api/models';
 
-export const resourceTypeControllerUpdateResourceType = async ({ resourceTypeId, payload }) => {
+export const resourceTypeControllerUpdateResourceType = async ({
+  resourceTypeId,
+  payload,
+}) => {
   const res = await ResourceTypeModel.findOneAndUpdate(
     {
       _id: resourceTypeId,

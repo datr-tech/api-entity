@@ -1,5 +1,5 @@
-import { Types } from 'mongoose';
 import { ResourceModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
 export const resourceControllerCreateResource = async ({
   endpointId,

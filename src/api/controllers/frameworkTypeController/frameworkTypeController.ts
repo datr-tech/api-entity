@@ -1,7 +1,7 @@
 import { frameworkTypeControllerCreateFrameworkType } from './frameworkTypeControllerCreateFrameworkType';
-import { frameworkTypeControllerUpdateFrameworkType } from './frameworkTypeControllerUpdateFrameworkType';
-import { frameworkTypeControllerReadFrameworkType } from './frameworkTypeControllerReadFrameworkType';
 import { frameworkTypeControllerDeleteFrameworkType } from './frameworkTypeControllerDeleteFrameworkType';
+import { frameworkTypeControllerReadFrameworkType } from './frameworkTypeControllerReadFrameworkType';
+import { frameworkTypeControllerUpdateFrameworkType } from './frameworkTypeControllerUpdateFrameworkType';
 
 export const frameworkTypeController = {
   createFrameworkType: frameworkTypeControllerCreateFrameworkType,

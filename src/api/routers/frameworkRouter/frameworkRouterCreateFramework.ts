@@ -1,9 +1,15 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { frameworkValidationSchemaCreateFramework } from '@freight/entity-router-validation-schemas';
 import { frameworkController } from '@app/api/controllers/frameworkController';
 import { IFrameworkModel } from '@app/interfaces/api/models/IFrameworkModel';
+import { frameworkValidationSchemaCreateFramework } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const frameworkRouterCreateFramework = Router(options).post(
   '/',

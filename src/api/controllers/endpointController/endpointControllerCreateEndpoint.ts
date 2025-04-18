@@ -1,7 +1,13 @@
-import { Types } from 'mongoose';
 import { EndpointModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
-export const endpointControllerCreateEndpoint = async ({ endpointTypeId, description, name, adminStatusId, adminUserId }) => {
+export const endpointControllerCreateEndpoint = async ({
+  endpointTypeId,
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const endpointId = new Types.ObjectId();
   const modelParams = {
     endpointId,

@@ -1,15 +1,15 @@
 {
   "name": "@datr.tech/api-entity",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "private": false,
   "description": "API for entity",
   "keywords": [
-		"api",
+    "api",
     "datr.tech",
-		"entity",
-		"express",
-		"express-validator",
-		"typescript"
+    "entity",
+    "express",
+    "express-validator",
+    "typescript"
   ],
   "homepage": "https://github.com/datr.tech/api-entity",
   "repository": {
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "npx webpack --mode production",
+    "build": "npx tsc",
     "prechangelog": "git add ./package.json",
     "changelog": "npx auto-changelog",
     "postchangelog": "npm-run-all changelog:add changelog:commit",
@@ -35,24 +35,26 @@
     "changelog:commit": "git commit -m 'ci: update changelog' --no-verify",
     "clean": "npx rimraf ./coverage/* ./dist/*",
     "commit-msg": "commitlint --edit",
+    "dev": "npx tsx ./src/index.ts",
     "format:config": "npx prettier --write './*.{cjs,js,json,mjs,ts}'",
     "format:src": "npx prettier --write './src/**/*.{json,ts}'",
-    "format:test": "npx prettier --write './test/**/*.{json,ts}'",
-    "format": "npm-run-all format:config format:src format:test",
+    "format": "npm-run-all format:config format:src",
     "lint": "npx eslint --fix",
-    "preversion": "npm-run-all format lint spell test",
-    "version": "npm-run-all build test:it changelog",
+    "preversion": "npm-run-all format lint spell",
+    "version": "npm-run-all build changelog",
     "postversion": "git push origin master --tags --no-verify",
     "precommit": "npm-run-all format lint spell",
     "prepare": "husky",
-    "prepush": "npm run test",
+    "prepush": "npm run lint",
     "spell": "npx cspell ./src/**/*.ts",
+    "start": "node ./dist/index.js",
     "test:it": "npx jest ./test/integration",
     "test:unit": "npx jest ./test/unit --coverage",
     "test": "npm run test:unit"
   },
   "dependencies": {
-		"@datr.tech/leith-common-services": "^0.3.7",
+    "@datr.tech/cargo-router-validation-schemas-entity": "^0.3.0",
+    "@datr.tech/leith-common-services": "^0.3.7",
     "@datr.tech/leith-common-logger": "^0.3.0",
     "@datr.tech/leith-common-mongodb-connector": "^0.3.0",
     "@datr.tech/leith-config-api-router-options": "^0.3.0",
@@ -69,7 +71,6 @@
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.10.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.13",
     "auto-changelog": "^2.5.0",
@@ -88,9 +89,7 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
-    "typescript-eslint": "^8.6.0",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4"
+    "typescript-eslint": "^8.6.0"
   },
   "engines": {
     "node": ">=18.0.0",

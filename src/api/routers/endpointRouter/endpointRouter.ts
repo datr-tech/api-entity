@@ -1,5 +1,5 @@
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Router } from 'express';
-import { options } from '@freight/common-router-options';
 import { endpointRouterCreateEndpoint } from './endpointRouterCreateEndpoint';
 import { endpointRouterDeleteEndpoint } from './endpointRouterDeleteEndpoint';
 import { endpointRouterReadEndpoint } from './endpointRouterReadEndpoint';

@@ -1,6 +1,13 @@
+import {
+  modelValidatorAdminStatusId,
+  modelValidatorAdminUserId,
+  modelValidatorFrameworkId,
+} from '@app/api/modelValidators';
+import {
+  serviceModelSchema,
+  serviceModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-entity';
 import { model, Schema } from 'mongoose';
-import { serviceModelSchema, serviceModelSchemaOptions } from '@freight/entity-model-schemas';
-import { modelValidatorFrameworkId, modelValidatorAdminStatusId, modelValidatorAdminUserId } from '@app/api/modelValidators';
 
 const serviceSchema = new Schema(serviceModelSchema, serviceModelSchemaOptions);
 

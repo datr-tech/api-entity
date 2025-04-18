@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { frameworkTypeValidationSchemaReadFrameworkType } from '@freight/entity-router-validation-schemas';
 import { frameworkTypeController } from '@app/api/controllers/frameworkTypeController';
+import { frameworkTypeValidationSchemaReadFrameworkType } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const frameworkTypeRouterReadFrameworkType = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const frameworkTypeRouterReadFrameworkType = Router(options).get(
 
     if (errors.isEmpty()) {
       const { frameworkTypeId } = matchedData(req);
-      const frameworkType = await frameworkTypeController.readFrameworkType({ frameworkTypeId });
+      const frameworkType = await frameworkTypeController.readFrameworkType({
+        frameworkTypeId,
+      });
 
       res.status(200).send({ frameworkType });
     } else {

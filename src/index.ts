@@ -1,7 +1,7 @@
-import 'dotenv/config';
-import { logger } from '@freight/common-logger';
-import { db } from '@freight/common-mongodb-connector';
 import { app } from '@app/api';
+import { db } from '@datr.tech/leith-common-mongodb-connector';
+import { logger } from '@datr.tech/leith-common-logger';
+import 'dotenv/config';
 
 const { API_NAME, API_PORT } = process.env;
 

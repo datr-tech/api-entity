@@ -1,12 +1,15 @@
-import { model, Schema } from 'mongoose';
-import { resourceModelSchema, resourceModelSchemaOptions } from '@freight/entity-model-schemas';
 import {
+  modelValidatorAdminStatusId,
+  modelValidatorAdminUserId,
   modelValidatorEndpointId,
   modelValidatorResourceTypeId,
   modelValidatorServiceId,
-  modelValidatorAdminStatusId,
-  modelValidatorAdminUserId,
 } from '@app/api/modelValidators';
+import {
+  resourceModelSchema,
+  resourceModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-entity';
+import { model, Schema } from 'mongoose';
 
 const resourceSchema = new Schema(resourceModelSchema, resourceModelSchemaOptions);
 

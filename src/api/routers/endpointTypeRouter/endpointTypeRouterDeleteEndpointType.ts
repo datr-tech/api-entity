@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { endpointTypeValidationSchemaDeleteEndpointType } from '@freight/entity-router-validation-schemas';
 import { endpointTypeController } from '@app/api/controllers/endpointTypeController';
+import { endpointTypeValidationSchemaDeleteEndpointType } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const endpointTypeRouterDeleteEndpointType = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const endpointTypeRouterDeleteEndpointType = Router(options).get(
 
     if (errors.isEmpty()) {
       const { endpointTypeId } = matchedData(req);
-      const deleteResponse = await endpointTypeController.deleteEndpointType({ endpointTypeId });
+      const deleteResponse = await endpointTypeController.deleteEndpointType({
+        endpointTypeId,
+      });
 
       res.status(200).send({ deleteResponse });
     } else {

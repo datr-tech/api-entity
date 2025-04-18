@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { frameworkValidationSchemaReadFramework } from '@freight/entity-router-validation-schemas';
 import { frameworkController } from '@app/api/controllers/frameworkController';
+import { frameworkValidationSchemaReadFramework } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const frameworkRouterReadFramework = Router(options).get(
   '/',

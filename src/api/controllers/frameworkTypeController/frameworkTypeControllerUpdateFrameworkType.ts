@@ -1,6 +1,9 @@
 import { FrameworkTypeModel } from '@app/api/models';
 
-export const frameworkTypeControllerUpdateFrameworkType = async ({ frameworkTypeId, payload }) => {
+export const frameworkTypeControllerUpdateFrameworkType = async ({
+  frameworkTypeId,
+  payload,
+}) => {
   const res = await FrameworkTypeModel.findOneAndUpdate(
     {
       _id: frameworkTypeId,

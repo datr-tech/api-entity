@@ -1,7 +1,7 @@
 import { serviceControllerCreateService } from './serviceControllerCreateService';
-import { serviceControllerUpdateService } from './serviceControllerUpdateService';
-import { serviceControllerReadService } from './serviceControllerReadService';
 import { serviceControllerDeleteService } from './serviceControllerDeleteService';
+import { serviceControllerReadService } from './serviceControllerReadService';
+import { serviceControllerUpdateService } from './serviceControllerUpdateService';
 
 export const serviceController = {
   createService: serviceControllerCreateService,

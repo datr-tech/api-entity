@@ -1,5 +1,5 @@
-import { Types } from 'mongoose';
 import { ServiceModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
 export const serviceControllerDeleteService = async ({ serviceId }) => {
   const res = await ServiceModel.findOneAndUpdate(

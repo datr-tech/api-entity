@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { endpointTypeValidationSchemaReadEndpointType } from '@freight/entity-router-validation-schemas';
 import { endpointTypeController } from '@app/api/controllers/endpointTypeController';
+import { endpointTypeValidationSchemaReadEndpointType } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const endpointTypeRouterReadEndpointType = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const endpointTypeRouterReadEndpointType = Router(options).get(
 
     if (errors.isEmpty()) {
       const { endpointTypeId } = matchedData(req);
-      const endpointType = await endpointTypeController.readEndpointType({ endpointTypeId });
+      const endpointType = await endpointTypeController.readEndpointType({
+        endpointTypeId,
+      });
 
       res.status(200).send({ endpointType });
     } else {

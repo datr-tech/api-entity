@@ -1,9 +1,15 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { endpointValidationSchemaCreateEndpoint } from '@freight/entity-router-validation-schemas';
 import { endpointController } from '@app/api/controllers/endpointController';
 import { IEndpointModel } from '@app/interfaces/api/models/IEndpointModel';
+import { endpointValidationSchemaCreateEndpoint } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const endpointRouterCreateEndpoint = Router(options).post(
   '/',

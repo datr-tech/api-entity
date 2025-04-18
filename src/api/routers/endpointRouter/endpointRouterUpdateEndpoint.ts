@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { endpointValidationSchemaUpdateEndpoint } from '@freight/entity-router-validation-schemas';
 import { endpointController } from '@app/api/controllers/endpointController';
+import { endpointValidationSchemaUpdateEndpoint } from '@datr.tech/cargo-router-validation-schemas-entity';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const endpointRouterUpdateEndpoint = Router(options).patch(
   '/',
@@ -13,7 +19,10 @@ export const endpointRouterUpdateEndpoint = Router(options).patch(
 
     if (errors.isEmpty()) {
       const { endpointId, ...payload } = matchedData(req);
-      const updateStatus = await endpointController.updateEndpoint({ endpointId, payload });
+      const updateStatus = await endpointController.updateEndpoint({
+        endpointId,
+        payload,
+      });
 
       res.status(200).send({ updateStatus });
     } else {

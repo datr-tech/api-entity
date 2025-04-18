@@ -1,5 +1,5 @@
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Router } from 'express';
-import { options } from '@freight/common-router-options';
 import { frameworkRouterCreateFramework } from './frameworkRouterCreateFramework';
 import { frameworkRouterDeleteFramework } from './frameworkRouterDeleteFramework';
 import { frameworkRouterReadFramework } from './frameworkRouterReadFramework';

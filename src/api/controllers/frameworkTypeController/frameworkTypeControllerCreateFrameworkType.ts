@@ -1,7 +1,12 @@
-import { Types } from 'mongoose';
 import { FrameworkTypeModel } from '@app/api/models';
+import { Types } from 'mongoose';
 
-export const frameworkTypeControllerCreateFrameworkType = async ({ description, name, adminStatusId, adminUserId }) => {
+export const frameworkTypeControllerCreateFrameworkType = async ({
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const frameworkTypeId = new Types.ObjectId();
   const modelParams = {
     frameworkTypeId,
