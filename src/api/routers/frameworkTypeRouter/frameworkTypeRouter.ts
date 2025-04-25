@@ -9,4 +9,4 @@ export const frameworkTypeRouter = Router(options)
   .use('/:frameworkTypeId', frameworkTypeRouterDeleteFrameworkType)
   .use('/:frameworkTypeId', frameworkTypeRouterReadFrameworkType)
   .use('/:frameworkTypeId', frameworkTypeRouterUpdateFrameworkType)
-  .use('/', frameworkTypeRouterCreateFrameworkType)
+  .use('/', frameworkTypeRouterCreateFrameworkType);

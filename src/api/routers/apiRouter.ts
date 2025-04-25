@@ -9,10 +9,10 @@ import { resourceTypeRouter } from './resourceTypeRouter';
 import { serviceRouter } from './serviceRouter';
 
 export const apiRouter = Router(options)
-  .use('/api/v1/endpointRouter', endpointRouter)
-  .use('/api/v1/endpointTypeRouter', endpointTypeRouter)
-  .use('/api/v1/frameworkRouter', frameworkRouter)
-  .use('/api/v1/frameworkTypeRouter', frameworkTypeRouter)
-  .use('/api/v1/resourceRouter', resourceRouter)
-  .use('/api/v1/resourceTypeRouter', resourceTypeRouter)
-  .use('/api/v1/serviceRouter', serviceRouter);
+  .use('/api/v1/endpoint', endpointRouter)
+  .use('/api/v1/endpointType', endpointTypeRouter)
+  .use('/api/v1/framework', frameworkRouter)
+  .use('/api/v1/frameworkType', frameworkTypeRouter)
+  .use('/api/v1/resource', resourceRouter)
+  .use('/api/v1/resourceType', resourceTypeRouter)
+  .use('/api/v1/service', serviceRouter);

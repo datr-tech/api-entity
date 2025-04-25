@@ -7,5 +7,14 @@
     }
   ],
   "version": "0.2",
-  "words": ["datr", "granul", "granul8", "ae", "tsconfg", "tspaths"]
+  "words": [
+    "ae",
+    "datr",
+    "granul",
+    "granul8",
+    "healthcheck",
+    "mariadb",
+    "tsconfg",
+    "tspaths"
+  ]
 }
