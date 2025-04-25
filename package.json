@@ -1,7 +1,7 @@
 {
   "name": "@datr.tech/api-entity",
   "description": "API for entity",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": false,
   "homepage": "https://github.com/datr.tech/api-entity",
   "repository": {
