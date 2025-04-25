@@ -2,7 +2,7 @@ import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
   modelValidatorFrameworkTypeId,
-} from '@app/api/modelValidators';
+} from '@app-ae/api/modelValidators';
 import {
   frameworkModelSchema,
   frameworkModelSchemaOptions,

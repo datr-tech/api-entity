@@ -6,7 +6,7 @@ import { resourceRouterReadResource } from './resourceRouterReadResource';
 import { resourceRouterUpdateResource } from './resourceRouterUpdateResource';
 
 export const resourceRouter = Router(options)
-  .use('/', resourceRouterCreateResource)
   .use('/:resourceId', resourceRouterDeleteResource)
   .use('/:resourceId', resourceRouterReadResource)
-  .use('/:resourceId', resourceRouterUpdateResource);
+  .use('/:resourceId', resourceRouterUpdateResource)
+  .use('/', resourceRouterCreateResource);

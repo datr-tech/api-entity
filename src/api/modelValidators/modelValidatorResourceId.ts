@@ -1,4 +1,4 @@
-import { ResourceModel } from '@app/api/models';
+import { ResourceModel } from '@app-ae/api/models';
 
 export const modelValidatorResourceId = async (doc, next) => {
   let resource;

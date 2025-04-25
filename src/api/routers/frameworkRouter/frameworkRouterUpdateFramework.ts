@@ -1,4 +1,4 @@
-import { frameworkController } from '@app/api/controllers/frameworkController';
+import { frameworkController } from '@app-ae/api/controllers/frameworkController';
 import { frameworkValidationSchemaUpdateFramework } from '@datr.tech/cargo-router-validation-schemas-entity';
 import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';

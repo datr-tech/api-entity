@@ -1,4 +1,4 @@
-import { EndpointModel } from '@app/api/models';
+import { EndpointModel } from '@app-ae/api/models';
 
 export const modelValidatorEndpointId = async (doc, next) => {
   let endpoint;

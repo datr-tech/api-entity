@@ -1,7 +1,7 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-} from '@app/api/modelValidators';
+} from '@app-ae/api/modelValidators';
 import {
   endpointTypeModelSchema,
   endpointTypeModelSchemaOptions,

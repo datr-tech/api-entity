@@ -1,5 +1,5 @@
-import { endpointController } from '@app/api/controllers/endpointController';
-import { IEndpointModel } from '@app/interfaces/api/models/IEndpointModel';
+import { endpointController } from '@app-ae/api/controllers/endpointController';
+import { IEndpointModel } from '@app-ae/interfaces/api/models/IEndpointModel';
 import { endpointValidationSchemaCreateEndpoint } from '@datr.tech/cargo-router-validation-schemas-entity';
 import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';

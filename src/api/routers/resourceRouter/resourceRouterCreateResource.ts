@@ -1,5 +1,5 @@
-import { resourceController } from '@app/api/controllers/resourceController';
-import { IResourceModel } from '@app/interfaces/api/models/IResourceModel';
+import { resourceController } from '@app-ae/api/controllers/resourceController';
+import { IResourceModel } from '@app-ae/interfaces/api/models/IResourceModel';
 import { resourceValidationSchemaCreateResource } from '@datr.tech/cargo-router-validation-schemas-entity';
 import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';

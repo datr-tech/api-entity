@@ -1,4 +1,4 @@
-import { EndpointModel } from '@app/api/models';
+import { EndpointModel } from '@app-ae/api/models';
 
 export const endpointControllerUpdateEndpoint = async ({ endpointId, payload }) => {
   const res = await EndpointModel.findOneAndUpdate(

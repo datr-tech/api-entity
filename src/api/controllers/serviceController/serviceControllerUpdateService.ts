@@ -1,4 +1,4 @@
-import { ServiceModel } from '@app/api/models';
+import { ServiceModel } from '@app-ae/api/models';
 
 export const serviceControllerUpdateService = async ({ serviceId, payload }) => {
   const res = await ServiceModel.findOneAndUpdate(

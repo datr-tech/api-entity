@@ -1,4 +1,4 @@
-import { app } from '@app/api';
+import { app } from '@app-ae/api';
 import { logger } from '@datr.tech/leith-common-logger';
 import { db } from '@datr.tech/leith-common-mongodb-connector';
 import 'dotenv/config';

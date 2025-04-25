@@ -6,7 +6,7 @@ import { endpointRouterReadEndpoint } from './endpointRouterReadEndpoint';
 import { endpointRouterUpdateEndpoint } from './endpointRouterUpdateEndpoint';
 
 export const endpointRouter = Router(options)
-  .use('/', endpointRouterCreateEndpoint)
   .use('/:endpointId', endpointRouterDeleteEndpoint)
   .use('/:endpointId', endpointRouterReadEndpoint)
-  .use('/:endpointId', endpointRouterUpdateEndpoint);
+  .use('/:endpointId', endpointRouterUpdateEndpoint)
+  .use('/', endpointRouterCreateEndpoint);

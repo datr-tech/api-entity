@@ -6,7 +6,7 @@ import { endpointTypeRouterReadEndpointType } from './endpointTypeRouterReadEndp
 import { endpointTypeRouterUpdateEndpointType } from './endpointTypeRouterUpdateEndpointType';
 
 export const endpointTypeRouter = Router(options)
-  .use('/', endpointTypeRouterCreateEndpointType)
   .use('/:endpointTypeId', endpointTypeRouterDeleteEndpointType)
   .use('/:endpointTypeId', endpointTypeRouterReadEndpointType)
-  .use('/:endpointTypeId', endpointTypeRouterUpdateEndpointType);
+  .use('/:endpointTypeId', endpointTypeRouterUpdateEndpointType)
+  .use('/', endpointTypeRouterCreateEndpointType);

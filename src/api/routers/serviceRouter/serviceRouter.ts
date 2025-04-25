@@ -6,7 +6,7 @@ import { serviceRouterReadService } from './serviceRouterReadService';
 import { serviceRouterUpdateService } from './serviceRouterUpdateService';
 
 export const serviceRouter = Router(options)
-  .use('/', serviceRouterCreateService)
   .use('/:serviceId', serviceRouterDeleteService)
   .use('/:serviceId', serviceRouterReadService)
-  .use('/:serviceId', serviceRouterUpdateService);
+  .use('/:serviceId', serviceRouterUpdateService)
+  .use('/', serviceRouterCreateService);

@@ -1,4 +1,4 @@
-import { FrameworkTypeModel } from '@app/api/models';
+import { FrameworkTypeModel } from '@app-ae/api/models';
 
 export const frameworkTypeControllerReadFrameworkType = async ({ frameworkTypeId }) => {
   const frameworkType = await FrameworkTypeModel.findById(frameworkTypeId);

@@ -1,4 +1,4 @@
-import { FrameworkModel } from '@app/api/models';
+import { FrameworkModel } from '@app-ae/api/models';
 import { Types } from 'mongoose';
 
 export const frameworkControllerCreateFramework = async ({

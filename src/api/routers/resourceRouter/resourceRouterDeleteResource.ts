@@ -1,4 +1,4 @@
-import { resourceController } from '@app/api/controllers/resourceController';
+import { resourceController } from '@app-ae/api/controllers/resourceController';
 import { resourceValidationSchemaDeleteResource } from '@datr.tech/cargo-router-validation-schemas-entity';
 import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';

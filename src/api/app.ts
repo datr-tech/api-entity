@@ -1,4 +1,4 @@
-import { apiRouter } from '@app/api/routers';
+import { apiRouter } from '@app-ae/api/routers';
 import express from 'express';
 
 const { API_NAME } = process.env;

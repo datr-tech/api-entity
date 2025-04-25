@@ -6,7 +6,7 @@ import { frameworkTypeRouterReadFrameworkType } from './frameworkTypeRouterReadF
 import { frameworkTypeRouterUpdateFrameworkType } from './frameworkTypeRouterUpdateFrameworkType';
 
 export const frameworkTypeRouter = Router(options)
-  .use('/', frameworkTypeRouterCreateFrameworkType)
   .use('/:frameworkTypeId', frameworkTypeRouterDeleteFrameworkType)
   .use('/:frameworkTypeId', frameworkTypeRouterReadFrameworkType)
-  .use('/:frameworkTypeId', frameworkTypeRouterUpdateFrameworkType);
+  .use('/:frameworkTypeId', frameworkTypeRouterUpdateFrameworkType)
+  .use('/', frameworkTypeRouterCreateFrameworkType)

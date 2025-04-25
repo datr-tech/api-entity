@@ -4,7 +4,7 @@ import {
   modelValidatorEndpointId,
   modelValidatorResourceTypeId,
   modelValidatorServiceId,
-} from '@app/api/modelValidators';
+} from '@app-ae/api/modelValidators';
 import {
   resourceModelSchema,
   resourceModelSchemaOptions,

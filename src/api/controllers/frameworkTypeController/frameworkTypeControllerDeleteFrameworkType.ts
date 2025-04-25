@@ -1,4 +1,4 @@
-import { FrameworkTypeModel } from '@app/api/models';
+import { FrameworkTypeModel } from '@app-ae/api/models';
 import { Types } from 'mongoose';
 
 export const frameworkTypeControllerDeleteFrameworkType = async ({ frameworkTypeId }) => {

@@ -1,4 +1,4 @@
-import { ServiceModel } from '@app/api/models';
+import { ServiceModel } from '@app-ae/api/models';
 import { Types } from 'mongoose';
 
 export const serviceControllerDeleteService = async ({ serviceId }) => {

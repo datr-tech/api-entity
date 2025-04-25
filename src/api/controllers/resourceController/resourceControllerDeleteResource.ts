@@ -1,4 +1,4 @@
-import { ResourceModel } from '@app/api/models';
+import { ResourceModel } from '@app-ae/api/models';
 import { Types } from 'mongoose';
 
 export const resourceControllerDeleteResource = async ({ resourceId }) => {

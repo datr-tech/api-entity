@@ -1,4 +1,4 @@
-import { FrameworkTypeModel } from '@app/api/models';
+import { FrameworkTypeModel } from '@app-ae/api/models';
 
 export const modelValidatorFrameworkTypeId = async (doc, next) => {
   let frameworkType;

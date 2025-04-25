@@ -1,5 +1,5 @@
-import { frameworkTypeController } from '@app/api/controllers/frameworkTypeController';
-import { IFrameworkTypeModel } from '@app/interfaces/api/models/IFrameworkTypeModel';
+import { frameworkTypeController } from '@app-ae/api/controllers/frameworkTypeController';
+import { IFrameworkTypeModel } from '@app-ae/interfaces/api/models/IFrameworkTypeModel';
 import { frameworkTypeValidationSchemaCreateFrameworkType } from '@datr.tech/cargo-router-validation-schemas-entity';
 import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';

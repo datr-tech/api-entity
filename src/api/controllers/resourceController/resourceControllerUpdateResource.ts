@@ -1,4 +1,4 @@
-import { ResourceModel } from '@app/api/models';
+import { ResourceModel } from '@app-ae/api/models';
 
 export const resourceControllerUpdateResource = async ({ resourceId, payload }) => {
   const res = await ResourceModel.findOneAndUpdate(

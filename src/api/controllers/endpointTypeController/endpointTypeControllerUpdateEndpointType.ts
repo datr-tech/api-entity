@@ -1,4 +1,4 @@
-import { EndpointTypeModel } from '@app/api/models';
+import { EndpointTypeModel } from '@app-ae/api/models';
 
 export const endpointTypeControllerUpdateEndpointType = async ({
   endpointTypeId,

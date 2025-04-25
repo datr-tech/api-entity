@@ -1,4 +1,4 @@
-import { ResourceTypeModel } from '@app/api/models';
+import { ResourceTypeModel } from '@app-ae/api/models';
 
 export const resourceTypeControllerUpdateResourceType = async ({
   resourceTypeId,

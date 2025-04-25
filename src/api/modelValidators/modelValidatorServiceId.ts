@@ -1,4 +1,4 @@
-import { ServiceModel } from '@app/api/models';
+import { ServiceModel } from '@app-ae/api/models';
 
 export const modelValidatorServiceId = async (doc, next) => {
   let service;
