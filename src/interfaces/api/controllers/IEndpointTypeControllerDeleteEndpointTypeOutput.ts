@@ -1,0 +1,6 @@
+import { IEndpointTypeControllerDeleteEndpointTypeOutputError } from './IEndpointTypeControllerDeleteEndpointTypeOutputError';
+import { IEndpointTypeControllerDeleteEndpointTypeOutputSuccess } from './IEndpointTypeControllerDeleteEndpointTypeOutputSuccess';
+
+export type IEndpointTypeControllerDeleteEndpointTypeOutput =
+  | IEndpointTypeControllerDeleteEndpointTypeOutputSuccess
+  | IEndpointTypeControllerDeleteEndpointTypeOutputError;

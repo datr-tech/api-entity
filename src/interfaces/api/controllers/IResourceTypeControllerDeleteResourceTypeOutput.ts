@@ -1,0 +1,6 @@
+import { IResourceTypeControllerDeleteResourceTypeOutputError } from './IResourceTypeControllerDeleteResourceTypeOutputError';
+import { IResourceTypeControllerDeleteResourceTypeOutputSuccess } from './IResourceTypeControllerDeleteResourceTypeOutputSuccess';
+
+export type IResourceTypeControllerDeleteResourceTypeOutput =
+  | IResourceTypeControllerDeleteResourceTypeOutputSuccess
+  | IResourceTypeControllerDeleteResourceTypeOutputError;

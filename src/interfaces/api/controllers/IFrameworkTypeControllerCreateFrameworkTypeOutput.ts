@@ -1,0 +1,6 @@
+import { IFrameworkTypeControllerCreateFrameworkTypeOutputError } from './IFrameworkTypeControllerCreateFrameworkTypeOutputError';
+import { IFrameworkTypeControllerCreateFrameworkTypeOutputSuccess } from './IFrameworkTypeControllerCreateFrameworkTypeOutputSuccess';
+
+export type IFrameworkTypeControllerCreateFrameworkTypeOutput =
+  | IFrameworkTypeControllerCreateFrameworkTypeOutputSuccess
+  | IFrameworkTypeControllerCreateFrameworkTypeOutputError;

@@ -1,0 +1,6 @@
+import { IEndpointTypeControllerCreateEndpointTypeOutputError } from './IEndpointTypeControllerCreateEndpointTypeOutputError';
+import { IEndpointTypeControllerCreateEndpointTypeOutputSuccess } from './IEndpointTypeControllerCreateEndpointTypeOutputSuccess';
+
+export type IEndpointTypeControllerCreateEndpointTypeOutput =
+  | IEndpointTypeControllerCreateEndpointTypeOutputSuccess
+  | IEndpointTypeControllerCreateEndpointTypeOutputError;

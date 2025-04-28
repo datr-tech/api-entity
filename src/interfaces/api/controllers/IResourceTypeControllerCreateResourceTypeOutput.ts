@@ -1,0 +1,6 @@
+import { IResourceTypeControllerCreateResourceTypeOutputError } from './IResourceTypeControllerCreateResourceTypeOutputError';
+import { IResourceTypeControllerCreateResourceTypeOutputSuccess } from './IResourceTypeControllerCreateResourceTypeOutputSuccess';
+
+export type IResourceTypeControllerCreateResourceTypeOutput =
+  | IResourceTypeControllerCreateResourceTypeOutputSuccess
+  | IResourceTypeControllerCreateResourceTypeOutputError;
