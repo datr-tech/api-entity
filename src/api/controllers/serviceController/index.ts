@@ -1,1 +1,0 @@
-export { serviceController } from './serviceController';
