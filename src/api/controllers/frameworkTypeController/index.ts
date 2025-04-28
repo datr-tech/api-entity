@@ -1,1 +1,0 @@
-export { frameworkTypeController } from './frameworkTypeController';
