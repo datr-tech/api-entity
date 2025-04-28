@@ -1,0 +1,1 @@
+export { resourceTypeController } from './resourceTypeController';

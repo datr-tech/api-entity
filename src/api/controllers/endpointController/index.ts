@@ -1,0 +1,1 @@
+export { endpointController } from './endpointController';
