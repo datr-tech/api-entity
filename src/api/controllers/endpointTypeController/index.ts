@@ -1,0 +1,1 @@
+export { endpointTypeController } from './endpointTypeController';
