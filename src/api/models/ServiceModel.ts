@@ -1,8 +1,8 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-  modelValidatorFrameworkId,
-} from '@app-ae/api/modelValidators';
+} from '@app-ae/api/modelValidators/foreign';
+import { modelValidatorFrameworkId } from '@app-ae/api/modelValidators/local/modelValidatorFrameworkId';
 import {
   serviceModelSchema,
   serviceModelSchemaOptions,

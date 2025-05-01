@@ -33,7 +33,7 @@ export const endpointControllerDeleteEndpoint: IEndpointControllerDeleteEndpoint
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const endpointModel = await EndpointModel.findOneAndUpdate(
+      await EndpointModel.findOneAndUpdate(
         {
           _id: endpointId,
         },

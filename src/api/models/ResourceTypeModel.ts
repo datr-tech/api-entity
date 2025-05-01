@@ -1,7 +1,7 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-} from '@app-ae/api/modelValidators';
+} from '@app-ae/api/modelValidators/foreign';
 import {
   resourceTypeModelSchema,
   resourceTypeModelSchemaOptions,

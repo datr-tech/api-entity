@@ -33,7 +33,7 @@ export const frameworkControllerDeleteFramework: IFrameworkControllerDeleteFrame
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const frameworkModel = await FrameworkModel.findOneAndUpdate(
+      await FrameworkModel.findOneAndUpdate(
         {
           _id: frameworkId,
         },

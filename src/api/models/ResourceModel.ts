@@ -1,10 +1,10 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-  modelValidatorEndpointId,
-  modelValidatorResourceTypeId,
-  modelValidatorServiceId,
-} from '@app-ae/api/modelValidators';
+} from '@app-ae/api/modelValidators/foreign';
+import { modelValidatorEndpointId } from '@app-ae/api/modelValidators/local/modelValidatorEndpointId';
+import { modelValidatorResourceTypeId } from '@app-ae/api/modelValidators/local/modelValidatorResourceTypeId';
+import { modelValidatorServiceId } from '@app-ae/api/modelValidators/local/modelValidatorServiceId';
 import {
   resourceModelSchema,
   resourceModelSchemaOptions,

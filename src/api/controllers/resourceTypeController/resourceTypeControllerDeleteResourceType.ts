@@ -33,7 +33,7 @@ export const resourceTypeControllerDeleteResourceType: IResourceTypeControllerDe
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const resourceTypeModel = await ResourceTypeModel.findOneAndUpdate(
+      await ResourceTypeModel.findOneAndUpdate(
         {
           _id: resourceTypeId,
         },

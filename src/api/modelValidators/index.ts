@@ -1,9 +1,0 @@
-export { modelValidatorAdminStatusId } from './modelValidatorAdminStatusId';
-export { modelValidatorAdminUserId } from './modelValidatorAdminUserId';
-export { modelValidatorEndpointId } from './modelValidatorEndpointId';
-export { modelValidatorEndpointTypeId } from './modelValidatorEndpointTypeId';
-export { modelValidatorFrameworkId } from './modelValidatorFrameworkId';
-export { modelValidatorFrameworkTypeId } from './modelValidatorFrameworkTypeId';
-export { modelValidatorResourceId } from './modelValidatorResourceId';
-export { modelValidatorResourceTypeId } from './modelValidatorResourceTypeId';
-export { modelValidatorServiceId } from './modelValidatorServiceId';

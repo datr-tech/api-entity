@@ -33,7 +33,7 @@ export const resourceControllerDeleteResource: IResourceControllerDeleteResource
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const resourceModel = await ResourceModel.findOneAndUpdate(
+      await ResourceModel.findOneAndUpdate(
         {
           _id: resourceId,
         },

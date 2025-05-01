@@ -34,7 +34,7 @@ export const serviceControllerDeleteService: IServiceControllerDeleteService = a
      * found model by updating the value of the model's
      * 'adminStatusId' field.
      */
-    const serviceModel = await ServiceModel.findOneAndUpdate(
+    await ServiceModel.findOneAndUpdate(
       {
         _id: serviceId,
       },
