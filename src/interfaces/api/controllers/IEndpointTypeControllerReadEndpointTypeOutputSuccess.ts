@@ -4,5 +4,6 @@ export interface IEndpointTypeControllerReadEndpointTypeOutputSuccess {
   error: false;
   payload: {
     endpointTypeModel: IEndpointTypeModel;
+    responseStatusCode: number;
   };
 }

@@ -4,5 +4,6 @@ export interface IServiceControllerReadServiceOutputSuccess {
   error: false;
   payload: {
     serviceModel: IServiceModel;
+    responseStatusCode: number;
   };
 }

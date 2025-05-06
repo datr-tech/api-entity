@@ -53,7 +53,10 @@ export const endpointTypeControllerUpdateEndpointType: IEndpointTypeControllerUp
        * 'stat', to return the updated model's primary key.
        */
       stat.error = false;
-      stat.payload = { endpointTypeId };
+      stat.payload = {
+        endpointTypeId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to 'IEndpointTypeControllerUpdateEndpointTypeOutputSuccess',
@@ -67,7 +70,10 @@ export const endpointTypeControllerUpdateEndpointType: IEndpointTypeControllerUp
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IEndpointTypeControllerUpdateEndpointTypeOutputError',

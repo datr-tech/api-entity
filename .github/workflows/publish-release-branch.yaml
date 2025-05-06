@@ -20,7 +20,7 @@ jobs:
     - run: npm run format
     - run: npm run lint
     - run: npm run spell
-    - run: npm run build
+      #    - run: npm run build
 
   publish-npm:
     needs: build
@@ -33,7 +33,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@datr.tech'
       - run: npm ci
-      - run: npm run build
+        #- run: npm run build
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

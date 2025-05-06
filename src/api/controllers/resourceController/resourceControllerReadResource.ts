@@ -37,7 +37,10 @@ export const resourceControllerReadResource: IResourceControllerReadResource = a
      * 'stat', to return the found model.
      */
     stat.error = false;
-    stat.payload = { resourceModel };
+    stat.payload = {
+      resourceModel,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to
@@ -52,7 +55,10 @@ export const resourceControllerReadResource: IResourceControllerReadResource = a
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IResourceControllerReadResourceOutputError',

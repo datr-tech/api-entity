@@ -4,5 +4,6 @@ export interface IResourceTypeControllerDeleteResourceTypeOutputSuccess {
   error: false;
   payload: {
     resourceTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

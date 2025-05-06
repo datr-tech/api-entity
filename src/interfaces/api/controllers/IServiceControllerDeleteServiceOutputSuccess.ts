@@ -4,5 +4,6 @@ export interface IServiceControllerDeleteServiceOutputSuccess {
   error: false;
   payload: {
     serviceId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

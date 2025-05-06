@@ -54,7 +54,10 @@ export const frameworkControllerUpdateFramework: IFrameworkControllerUpdateFrame
        * 'stat', to return the updated model's primary key.
        */
       stat.error = false;
-      stat.payload = { frameworkId };
+      stat.payload = {
+        frameworkId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to 'IFrameworkControllerUpdateFrameworkOutputSuccess',
@@ -68,7 +71,10 @@ export const frameworkControllerUpdateFramework: IFrameworkControllerUpdateFrame
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IFrameworkControllerUpdateFrameworkOutputError',

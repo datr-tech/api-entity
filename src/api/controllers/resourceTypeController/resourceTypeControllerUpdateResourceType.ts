@@ -53,7 +53,10 @@ export const resourceTypeControllerUpdateResourceType: IResourceTypeControllerUp
        * 'stat', to return the updated model's primary key.
        */
       stat.error = false;
-      stat.payload = { resourceTypeId };
+      stat.payload = {
+        resourceTypeId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to 'IResourceTypeControllerUpdateResourceTypeOutputSuccess',
@@ -67,7 +70,10 @@ export const resourceTypeControllerUpdateResourceType: IResourceTypeControllerUp
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IResourceTypeControllerUpdateResourceTypeOutputError',

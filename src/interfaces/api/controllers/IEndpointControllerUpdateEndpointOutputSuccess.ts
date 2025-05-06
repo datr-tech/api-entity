@@ -4,5 +4,6 @@ export interface IEndpointControllerUpdateEndpointOutputSuccess {
   error: false;
   payload: {
     endpointId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

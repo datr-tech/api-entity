@@ -4,5 +4,6 @@ export interface IResourceTypeControllerCreateResourceTypeOutputSuccess {
   error: false;
   payload: {
     resourceTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

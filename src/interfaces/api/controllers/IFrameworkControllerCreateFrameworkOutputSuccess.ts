@@ -4,5 +4,6 @@ export interface IFrameworkControllerCreateFrameworkOutputSuccess {
   error: false;
   payload: {
     frameworkId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

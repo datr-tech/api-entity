@@ -7,5 +7,5 @@ export interface IServiceControllerCreateServiceInput {
   adminStatusId: Types.ObjectId;
   adminUserId: Types.ObjectId;
   createdAt?: number;
-  updatedAt: number;
+  updatedAt?: number;
 }

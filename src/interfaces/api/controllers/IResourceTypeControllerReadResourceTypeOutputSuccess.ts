@@ -4,5 +4,6 @@ export interface IResourceTypeControllerReadResourceTypeOutputSuccess {
   error: false;
   payload: {
     resourceTypeModel: IResourceTypeModel;
+    responseStatusCode: number;
   };
 }

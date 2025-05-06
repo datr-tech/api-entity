@@ -4,5 +4,6 @@ export interface IFrameworkTypeControllerReadFrameworkTypeOutputSuccess {
   error: false;
   payload: {
     frameworkTypeModel: IFrameworkTypeModel;
+    responseStatusCode: number;
   };
 }

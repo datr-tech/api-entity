@@ -4,5 +4,6 @@ export interface IEndpointControllerDeleteEndpointOutputSuccess {
   error: false;
   payload: {
     endpointId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

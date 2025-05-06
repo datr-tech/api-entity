@@ -1,5 +1,6 @@
 import { app } from '@app-ae/api';
 import { apiName, apiPort, dbHost, dbName, dbPort } from '@app-ae/config';
+import { seedFrameworkType } from '@app-ae/db';
 import { logger } from '@datr.tech/leith-common-logger';
 import { db } from '@datr.tech/leith-common-mongodb-connector';
 import 'dotenv/config';
@@ -15,5 +16,7 @@ app.listen(apiPort, () => {
       user: undefined,
       pass: undefined,
     });
+
+    seedFrameworkType();
   })();
 });

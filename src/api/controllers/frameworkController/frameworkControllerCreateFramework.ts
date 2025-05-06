@@ -20,7 +20,7 @@ import { Types } from 'mongoose';
  * @param { Types.ObjectId } params.adminStatusId
  * @param { Types.ObjectId } params.adminUserId
  * @param { number } params.createdAt  (Optional)
- * @param { number } params.updatedAt
+ * @param { number } params.updatedAt  (Optional)
  *
  * @returns { Promise<IFrameworkControllerCreateFrameworkOutput> }
  * @returns { Promise<IFrameworkControllerCreateFrameworkOutputError> } ON ERROR: Promise<{ error: true, payload: { message }}>
@@ -71,7 +71,10 @@ export const frameworkControllerCreateFramework: IFrameworkControllerCreateFrame
        * 'stat', to return the found model's primary key.
        */
       stat.error = false;
-      stat.payload = { frameworkId };
+      stat.payload = {
+        frameworkId,
+        responseStatusCode: 201,
+      };
 
       /*
        * Cast the response object to
@@ -86,7 +89,10 @@ export const frameworkControllerCreateFramework: IFrameworkControllerCreateFrame
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IFrameworkControllerCreateFrameworkOutputError',

@@ -56,7 +56,10 @@ export const serviceControllerUpdateService: IServiceControllerUpdateService = a
      * 'stat', to return the updated model's primary key.
      */
     stat.error = false;
-    stat.payload = { serviceId };
+    stat.payload = {
+      serviceId,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to 'IServiceControllerUpdateServiceOutputSuccess',
@@ -70,7 +73,10 @@ export const serviceControllerUpdateService: IServiceControllerUpdateService = a
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IServiceControllerUpdateServiceOutputError',
