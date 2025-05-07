@@ -1,1 +1,0 @@
-export { seedFrameworkType } from './seedFrameworkType';

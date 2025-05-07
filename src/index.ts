@@ -1,15 +1,26 @@
+import 'dotenv/config';
 import { app } from '@app-ae/api';
+import {
+  EndpointModel,
+  EndpointTypeModel,
+  FrameworkModel,
+  FrameworkTypeModel,
+  ResourceModel,
+  ResourceTypeModel,
+  ServiceModel,
+} from '@app-ae/api/models';
 import { apiName, apiPort, dbHost, dbName, dbPort } from '@app-ae/config';
-import { seedFrameworkType } from '@app-ae/db';
 import { logger } from '@datr.tech/leith-common-logger';
 import { db } from '@datr.tech/leith-common-mongodb-connector';
-import 'dotenv/config';
+import { entitySeeder } from '@datr.tech/leith-common-seeders';
 
 app.listen(apiPort, () => {
-  logger.info(`${apiName} listening on ${apiPort}`);
+  logger.info(`api-${apiName} listening on ${apiPort}`);
+
+	console.log({ dbHost, dbName, dbPort });
 
   (async () => {
-    await db.connect({
+    const stat = await db.connect({
       host: dbHost,
       name: dbName,
       port: dbPort,
@@ -17,6 +28,18 @@ app.listen(apiPort, () => {
       pass: undefined,
     });
 
-    seedFrameworkType();
+    const { isConnected } = stat;
+
+    if (isConnected) {
+      await entitySeeder(
+        EndpointModel,
+        EndpointTypeModel,
+        FrameworkModel,
+        FrameworkTypeModel,
+        ResourceModel,
+        ResourceTypeModel,
+        ServiceModel,
+      );
+    }
   })();
 });
