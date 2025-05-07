@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { app } from '@app-ae/api';
 import {
   EndpointModel,
@@ -13,11 +12,10 @@ import { apiName, apiPort, dbHost, dbName, dbPort } from '@app-ae/config';
 import { logger } from '@datr.tech/leith-common-logger';
 import { db } from '@datr.tech/leith-common-mongodb-connector';
 import { entitySeeder } from '@datr.tech/leith-common-seeders';
+import 'dotenv/config';
 
 app.listen(apiPort, () => {
   logger.info(`api-${apiName} listening on ${apiPort}`);
-
-	console.log({ dbHost, dbName, dbPort });
 
   (async () => {
     const stat = await db.connect({
